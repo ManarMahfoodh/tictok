@@ -1,0 +1,180 @@
+
+
+<?php// require("f.html") ?>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+    <style>
+	body{
+
+    background-image: url('w.png');
+	 background-position:right;
+	 background-size:500px 1000px ;
+	  background-repeat:no-repeat;
+    
+  }
+
+  .button {
+    background-color:black;<!--rgb(255,0,130);-->/* Green */
+    border: none;
+    color:  white;
+  font-weight: bold;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+<!--margin: 4px 1px;
+display: inline-block;
+    margin-left: 400px;
+    margin-bottom:40px;-->
+     height:30px;
+    cursor: pointer;
+    width:50%;
+  }
+
+input[type=submit]:hover {
+  background-color:rgb(255,0,130);
+}
+
+
+  h1{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+     margin-top:50px;
+     text-align: left;
+      margin-left: 15px;
+  }
+  input {
+  width: 70%;
+  padding: 10px 10px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+     border-color:white;
+     background-color:  white;
+}
+textarea{
+ border-color:white;
+  width: 70%;
+  padding: 10px 10px;
+  margin: 8px 8px;
+  box-sizing: border-box;
+       background-color:  white;
+  }
+  p{
+    color:black;;
+    text-align:left;
+    font-size: 35px;
+    font-weight: bold;
+     margin-left: 15px;
+     font-family: 'Times New Roman', Times, serif;
+  }
+  img {
+    margin-top: 30px;
+ <!--border-radius: 50%;-->
+    width:200px;
+ 	  hieght:200px;}
+  div.d{
+     width:1000px; height:auto;
+
+      border-style: solid;
+       border-color:black;
+        margin-left: auto;
+        margin-right: auto;
+         margin-top:auto;
+          margin-top:40px;
+           text-align:center;
+           background-color:rgba(211,211,211,0.2);
+
+
+  }
+  </style>
+  <script language='javascript'>
+		<!--
+
+			function checkAll(){
+				document.forms[0].jsEnabled.value="true";
+				if (na &&te)
+					return true;
+				else
+				{
+
+					document.getElementById('msg').innerHTML=" Please fill the form correctly "+fn+em+Aun+fps+cfps+Aem+na+te+ph;
+					return false;
+				}
+			}
+
+
+			var na=false;
+			function checkname(){
+				var name=document.forms[0].na.value;
+				var myexp=/^[a-z][a-z\s]{3,15}$/i;
+
+				if (!myexp.test(name))
+				{
+					document.getElementById('namsg').innerHTML="<span style='color:red'> Invalid Name </span>";
+					na=false;
+				}
+				else
+				{
+					document.getElementById('namsg').innerHTML="<span style=color:green> Valid Name </span>";
+					na=true;
+				}
+
+			}
+
+
+			var te=false;
+			function checktel(){
+				var name=document.forms[0].t.value;
+				var myexp=/^((\+|00)973)?\s?\d{8}$/;
+
+
+				if (!myexp.test(name) || name.length==0)
+				{
+					document.getElementById('telmsg').innerHTML="<span style='color:red'> Invalid Number </span>";
+					te=false;
+				}
+				else
+				{
+					document.getElementById('telmsg').innerHTML="<span style=color:green> Valid Number </span>";
+					te=true;
+				}
+
+			}
+
+
+
+
+
+
+
+
+</script>
+  </head>
+
+  <div class="d">
+  <center><img src="t.jpg"width="400px"height="200px"/></center>
+<div id='msg'></div>
+<form method='post' name="rababform" enctype="multipart/form-data"onSubmit="return checkAll();" action="confirm.php">
+	<input type="hidden" name="jsEnabled" value="false" />
+<h1> </h1>
+
+<p>Name </p><p><input name='na' onkeyup="checkname()" placeholder=' Write your name here  ' required
+></p>
+<span id='namsg' ></span>
+<p> Telephone Number </p><p><input size='15'  onkeyup="checktel()" name='t' placeholder=' Write your Telephone Number here 'required></p>
+<span id='telmsg' ></span>
+<p>My Purchase Picture </p><p><input type='file' name='picfile' placeholder='Please attach a picture'/></p>
+<p>Purchase Descripition </p><p><textarea name='desc'  style='overflow:auto;' placeholder='Write your purchases here: brand-item-size-color' required ></textarea></p>
+<p>Address </p><p><textarea name='add' style='overflow:auto;' placeholder='Write your Address here:area-block-road-building number-flat number OR write pickup ' required ></textarea></p>
+
+<br />
+<input class="button" type='submit' name='sub' value='Submit' /><br/>
+</form></div>
+<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+</body>
+</html>
